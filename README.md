@@ -20,6 +20,16 @@ local x, y = C_TaskQuest.GetQuestLocation (questID, mapID)
 local _, coords = C_Map.GetWorldPosFromMapPos(mapID, CreateVector2D(x, y))
 ```
 
+# TomTom World Quest Tracker Hook Information
+
+The changes are made the following function:
+
+`WorldQuestTracker.AddQuestTomTom (questID, mapID, noRemove)`
+
+As a result, the addon TomTom will be required for this function to fire. 
+However, `WorldQuestTracker.AddQuestToTracker` would likely be suitable as well.
+
 # Requirements
 
 EWT (due to usage of `MoveTo`)
+TomTom
